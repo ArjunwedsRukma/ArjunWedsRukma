@@ -7,11 +7,25 @@
 <link rel="shortcut icon" href="images/favicon.ico"/>
 <div id="player">
 	
+<iframe src="images/01.mp3" allow="autoplay" style="display:none" id="iframeAudio">
+</iframe> 
+	
 <audio autoplay hidden>
 		
 <source src="images/01.mp3" type="audio/mpeg">
 	
 </audio>
+
+	<script>
+		var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+    if(!isChrome){
+      $('#iframeAudio').remove()
+    }
+  else{
+     $('#playAudio').remove() //just to make sure that it will not have 2x audio in the background 
+  }
+	</script>
+	
 </div>
 
 

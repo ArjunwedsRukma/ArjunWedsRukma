@@ -1842,4 +1842,15 @@ form label {
   opacity: 0;
 }
 
-/*# sourceMappingURL=style.css.map */
+.blinking{
+  animation: blinkingText 2s infinite;
+}
+@keyframes blinkingText{
+  5%{color: white;}
+  20%{color: white;}
+  49%{color: transparent;}
+  50%{color: transparent;}
+  70%{color: white;}
+  99%{color: transparent;}
+  100%{color: white;}
+}
